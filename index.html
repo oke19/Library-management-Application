@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet">   
+</head>
+<body class="h-screen w-full">
+    <!----------------------------------------Navigation------------------------------------------------->
+    <nav class=" mb-10 w-full md:flex-row">
+        <div class="">
+            <div class="float-right pt-10 pr-10 rounded-full">
+                <img class="rounded-tl-md  rounded-full w-10 border border-blue-800" src="./Assets/All time Best/all time best9.jpg" alt="logo-img">
+             </div>
+        <h1 class="text- text-blue-100 mx-5 py-5">
+            <span class="text-blue-500">Library</span> <span class="text-blue-300"> Management</span> <span class="text-blue-200">Application</span></h1>
+             <div class="md:flex-row ">
+             <ul class="justify-center flex space-x-10 py-5 text-white pl-10 md:flex-row">
+                <li class="text-blue-400 mr-4"><a href="">Home</a></li>
+                <li class="mr-4"><a href="">Library</a></li>
+                <li class="text-blue-200 mr-4"><a href="">Catalog</a></li>
+             </ul>
+            </div>
+             <input type="text" placeholder="search..." class=" flex-end rounded px-5 float-right border border-15 mx-10 my-2 text-black bg-blue-200"> 
+        
+
+            </div>
+            <label for="Toggle3" class="inline-flex items-center p-1 pl-5 rounded-md cursor-pointer dark:text-gray-100">
+                <input id="Toggle3" type="checkbox" class="hidden peer">
+                <span class="px-4 py-2 rounded-l-md peer-checked:dark:bg-gray-700 dark:bg-blue-500">Light</span>
+                <span class="px-4 py-2 rounded-r-md dark:bg-gray-700 peer-checked:dark:bg-blue-500">Dark</span>
+            </label>
+    </nav>
+    
+    <!--------------------------------------------Form-input------------------------------------>
+    <div id="parent-container" class="justify-center text-center border border-blue-200 flex flex-col  ml-auto pl-10 m-10 mr-10 px-10 bg-blue-200 rounded-t-md">
+
+            <form id="bookForm" class="mt-24 pt-5 mb-24 flex flex-col border border-blue-500 bg-blue-300 rounded-lg" action="bookForm">
+
+                <h1 class="pb-10 pt-10 text-xl font-bold">Create Your Book Entry!</h1>
+
+                <!------------------Book-title---------------------------------->
+                <div class="pl-10 pr-10 flex flex-col pt-2">
+                  
+                <label for="title"><span class="float-left text-xl">Book title</span></label><br>
+                <input class="text-black rounded-md px-2" 
+                       placeholder="Enter book title"type="text" id="title" 
+                       name="title" required>
+
+                </div>
+                <!------------------Book-author-------------------------->
+                <div class="pl-10 pr-10 flex flex-col pt-2">
+                    <label class="" for="title"><span class="float-left text-xl">Author</span></label><br>
+                <input class="text-black rounded-md px-2" 
+                       placeholder="Author" 
+                       type="text" 
+                       id="author" 
+                       name="title" required>
+                </div>
+
+                <!--------------------Book-description-------------------->
+          <div class=" pl-10 pr-10 flex flex-col pt-4">
+                <label class="float-left rounded-md" 
+                       for="description"><span 
+                       class="float-left text-xl">Description</span></label>
+                <textarea class="text-black rounded-md px-2" 
+                          placeholder="Enter description" 
+                          name="description" 
+                          id="description" rows="2" cols="50" required></textarea>
+            </div>
+            <!---------------------Number 0f book pages-------------------->
+            
+
+        <div class="pl-10 pr-10 flex flex-col pt-2">
+                <label class="float-left" for="100"><span 
+                    class="float-left text-xl">Number of pages</span></label><br>
+                <input class="text-black rounded-md px-2" 
+                    placeholder="Pages"
+                    type="Number" id="pages" 
+                    name="pages" required>
+            </div>
+
+          <!---------------------Mark as read---------------------------------->
+            <div class="pl-5 pt-2 flex flex-row gap-5 ml-5 ">
+                <label for="isRead" class="text-gray-700 dark:text-gray-300 font-bold mr-1 pr-1">Have you read this book?</label>
+                <input type="checkbox" id="isRead" class="ml-1 leading-tight cursor-pointer">
+
+            </div>
+          <!---------submit-button------------->
+            <button type="submit"
+                    class="bg-[#344e41] hover:bg-[#588157] transition duration-300 text-white font-bold px-4 rounded focus:outline-none focus:shadow-outline w-24 px-1 py-1 p-2 ml-10 mb-5 mt-5 text-sm rounded">
+                Add Book
+            </button>
+            </form>
+            
+            <div id="bookList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 pb-10 text-left"></div>
+    </div>
+       
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+    
+<!------  <div class="border border-white-50 py-10 px-10 mx-10 p-4 flex flex-row justify-center gap-5 w-full">
+    !------first-card------------------>
+         <!---------------------------------------
+        <div class="border border-blue-500 gap-5 justify-center text-center text-white">
+            <form action="">
+                <label for="title">Book Title:</label>
+                <input class="text-black" type="text" id="title" name="title" required><br>
+
+                <label for="description">Description:</label><br>
+                <textarea class="text-black" name="description" id="description" rows="4" cols="50" required></textarea><br>
+        
+                <label for="100">Number of pages:</label>
+                <input class="text-black "type="Number" id="pages" name="pages" required><br>
+
+                <label for="read">Mark as read:</label>
+                <input type="checkbox" id="read" name="read"><br>
+
+                <button class="border border-goldenrod-800" type="submit">Add Book</button>
+            </form>
+            <div id="bookContainer">
+            </div>
+    </div>
+    </div>
+    
+    
+</div>
+       
